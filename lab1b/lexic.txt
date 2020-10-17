@@ -5,9 +5,9 @@
 
  lexic:
    - identifiers: a sequence of letters and digit(the first is mandatory to be a letter, and only one digit can be at the end)
-         identifier ::= letter | letter {letter} [digit]
-         letter ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
-         digit ::= "0" | "1" | ... | "9"
+         <identifier> ::= <letter> | <letter> {<letter>} [<digit>]
+         <letter> ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+         <digit> ::= "0" | "1" | ... | "9"
 
    - special symbols:
          operators: + - = * / % < > =< >= & |
@@ -16,8 +16,9 @@
 
    - constants
          integer:
-	   unsigned_no :== nozerodigit {digit}
-           nozerodigit :== "1" | "2" | ... | "9"
-           digit :== "0" | nozerodigit
+           <nozerodigit> ::= "1" | "2" | ... | "9"
+           <digit> ::= "0" | <nozerodigit>
+	   <seq> ::= <nozerodigit> | <nozerodigit> <digit> <seq>
+	   <integer> ::= <seq> | -<seq>
          
          
