@@ -1,7 +1,9 @@
+
  alphabet:
    - upper and lower case letters of the English alphabet
    - '-', '_'
    - digits
+
 
  lexic:
    - identifiers: a sequence of letters and digit(the first is mandatory to be a letter, and only one digit can be at the end)
@@ -9,10 +11,12 @@
          <letter> ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
          <digit> ::= "0" | "1" | ... | "9"
 
+
    - special symbols:
          operators: + - = * / % < > =< >= & |
          separators: [ ] { } ( ) , : space
          reserved words: R W int bool - (for if) -> (for loop)
+
 
    - constants
          integer:
@@ -20,5 +24,6 @@
            <digit> ::= "0" | <nozerodigit>
 	   <seq> ::= <nozerodigit> | <nozerodigit> <digit> <seq>
 	   <integer> ::= <seq> | -<seq>
+
          
          

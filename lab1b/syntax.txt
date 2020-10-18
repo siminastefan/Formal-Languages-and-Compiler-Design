@@ -1,33 +1,19 @@
+
 <declaration> ::= <identifier> ":" <type>
-
 <type1> ::= "BOOL" | "CHAR" | "INT" | "REAL"
-
 <arraydecl> ::= <identifier> "[" nr "]" ":" <type1>
-
 <type>  ::= <type1> | <arraydecl>
-
 <stmt> ::= <simplstmt> | <structstmt>
-
 <simplstmt> ::= <assignstmt> | <iostmt>
-
 <assignstmt> ::= <identifier> "=" <expression>
-
 <expression> ::= <expression> "+" <term> | <term>
-
 <term> ::= <term> "*" <factor> | <factor>
-
 <factor> ::= "(" <expression> ")" | <number>
-
 <number> ::= <integer> | <identifier>
-
 <iostmt> ::= "R" | "W" "(" <identifier> ")"
-
 <ifstmt> ::= "-" <condition> <stmt>
-
 <forstmt> ::= <identifier> "->" <identifier> | <constant>
-
 <condition> ::= <expression> RELATION <expression>
-
 <relation> ::= "<" | "=<" | "=" | "<>" | ">=" | ">" | "&" | "|"
 
 
