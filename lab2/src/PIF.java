@@ -15,4 +15,13 @@ public class PIF {
         this.table.add(pifElement);
     }
 
+    @Override
+    public String toString() {
+        String string = "";
+        string += "PIF \n";
+        for (int index = 0; index < this.table.size(); index++) {
+            string += this.table.get(index).getToken() + " | " + this.table.get(index).getPosition() + "\n";
+        }
+        return string;
+    }
 }

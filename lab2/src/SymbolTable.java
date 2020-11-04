@@ -31,4 +31,15 @@ public class SymbolTable {
         }
         return sum % 256;
     }
+
+    @Override
+    public String toString() {
+        String string = "";
+        string += "ST \n";
+        for (int index = 0; index < this.st.size(); index++) {
+            if (this.st.get(index).size() != 0)
+                string += index + " | " + this.st.get(index) + "\n";
+        }
+        return string;
+    }
 }

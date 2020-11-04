@@ -13,4 +13,20 @@ public class PIFElement {
     public void setPosition(Map.Entry<Integer, Integer> position) {
         this.position = position;
     }
+
+    public String getToken() {
+        return token;
+    }
+
+    public Map.Entry<Integer, Integer> getPosition() {
+        return position;
+    }
+
+    @Override
+    public String toString() {
+        return "PIFElement{" +
+                "token='" + token + '\'' +
+                ", position=" + position +
+                '}';
+    }
 }
